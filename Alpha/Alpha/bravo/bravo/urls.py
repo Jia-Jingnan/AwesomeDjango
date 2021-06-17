@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("豆瓣首页")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # url http://127.0.0.1:9000/
+    path('',index)
 ]
