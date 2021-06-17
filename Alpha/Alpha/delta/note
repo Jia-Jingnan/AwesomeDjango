@@ -1,2 +1,5 @@
 django URL映射：  
-1.
+1.为什么会去url文件中寻找映射？  
+是因为在settings文件中配置了ROOT_URLCONF为url，所以django会去url中寻找  
+2.在url中所有的映射都应该放在urlpatterns中  
+3.所有的映射不是随便写的，而是使用path函数或者是re_path函数进行包装的
