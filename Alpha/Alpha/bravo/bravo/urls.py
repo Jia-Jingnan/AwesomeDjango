@@ -17,11 +17,23 @@ from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
 
+
 def index(request):
     return HttpResponse("豆瓣首页")
+
+
+def book(request):
+    return HttpResponse("图书首页")
+
+
+def movie(request):
+    return HttpResponse("电影首页")
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # url http://127.0.0.1:9000/
-    path('',index)
+    path('', index),
+    path('book/', book),
+    path('movie/',movie),
 ]
