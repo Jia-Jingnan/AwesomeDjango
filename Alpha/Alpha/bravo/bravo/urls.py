@@ -16,18 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
+from book.views import book
+from movie.views import movie
+
 
 
 def index(request):
     return HttpResponse("豆瓣首页")
-
-
-def book(request):
-    return HttpResponse("图书首页")
-
-
-def movie(request):
-    return HttpResponse("电影首页")
 
 
 urlpatterns = [
@@ -35,5 +30,5 @@ urlpatterns = [
     # url http://127.0.0.1:9000/
     path('', index),
     path('book/', book),
-    path('movie/',movie),
+    path('movie/', movie),
 ]
