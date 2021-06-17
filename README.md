@@ -12,4 +12,3 @@
 <p align="center"><b>django 是一个开放源代码的 Web 应用框架，采用了 MVT 的软件设计模式，即模型（Model），视图（View）和模板（Template）</b></p>
 
 
-
