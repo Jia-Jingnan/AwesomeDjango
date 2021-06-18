@@ -9,7 +9,7 @@ def index(request):
     if username:
         return HttpResponse('front首页')
     else:
-        return redirect(reverse('login'))
+        return redirect(reverse('front:login'))
 
 
 def login(request):
