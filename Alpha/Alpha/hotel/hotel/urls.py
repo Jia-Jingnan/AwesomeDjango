@@ -19,5 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('front.urls')),
-    path('cms/', include('cms.urls'))
+    # 同一个app下有两个实例,新增示例命令空间
+    path('cms/', include('cms.urls', namespace='cms')),
+    path('cms1/', include('cms.urls', namespace='cms1')),
 ]
