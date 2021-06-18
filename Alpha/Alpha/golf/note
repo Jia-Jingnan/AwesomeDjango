@@ -1,0 +1,14 @@
+urls模块化：  
+1.如果项目变得越来越大，url会越来越多，如果都放在urls.py中，那么将不好管理
+，因此可以将每个app自己的urls放在自己的app中进行管理，一般会在app中新建
+一个urls.py文件，用来存这个app相关的子url  
+1.应该使用include函数包含子urls.py，并且这个urls.py的路径是相对与项目的路径
+示例代码如下
+```python
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('book/', include('book.urls'))
+]
+```
+2.在app的urls文件中，所有的url匹配也要放在一个叫做urlpatterns的变量中否则找不到
+3.url是会根据主urls和app中的urls进行拼接，因此注意不要多加斜杠
