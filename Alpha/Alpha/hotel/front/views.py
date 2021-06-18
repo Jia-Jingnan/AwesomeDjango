@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect,reverse
 
 
 # Create your views here.
@@ -9,7 +9,7 @@ def index(request):
     if username:
         return HttpResponse('front首页')
     else:
-        return redirect("/login/")
+        return redirect(reverse('login'))
 
 
 def login(request):
