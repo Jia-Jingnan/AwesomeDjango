@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from book import views
 from django.http import HttpResponse
+# 内置的转换器
 from django.urls import converters
 
 
@@ -30,6 +31,6 @@ urlpatterns = [
     path('book/detail/<book_id>/<category_id>', views.book_detail),
     # 查询字符串方式传参,即通过？传参
     path('book/author/', views.author_detial),
-    #
-    path('book/publish/<int:publish_id>', views.pulish_detail),
+    # 指定int类型传参,或者指定字符串(除了/之外)
+    path('book/publish/<str:publish_id>', views.pulish_detail),
 ]

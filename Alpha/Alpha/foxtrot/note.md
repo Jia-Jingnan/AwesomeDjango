@@ -12,4 +12,11 @@ def author_detial(request):
     return HttpResponse(text)
 ```
 因为查询字符串采用的是GET请求，所以通过request.GET来获取参数，并且因为GET类似一个字典的数据类型
-所以获取值的方式与字典是一样的
+所以获取值的方式与字典是一样的  
+
+url参数转换器:  
+1.str:除了"/"外所有的字符都是可以的  
+2.int： 只有是一个或多个的阿拉伯数字   
+3.path: 所有的字符都是满足的  
+4.uuid：只有满足uuid.uuid(4)这个函数返回的字符串的格式  
+5.slug:英文中的横杆或者英文字符或者阿拉伯数字
