@@ -1,0 +1,21 @@
+include函数的用法：  
+1.include(module, namespace=None):  
+    module:子url的模块
+    namespace: 实例命名空间，要使用实例命名空间要现在app的url中执行
+    应用命名空间  
+     
+2.include((pattern_list, app_namespace),namespace=None)
+    include第一个参数既可以是一个字符串也可以是一个远足，如果是元组
+    那么元组的第一个参数是url.py中的字符串，第二个参数是应用命名空间
+    应用命名空间既可以在子urls中使用app_name执行，也可以在根urls中
+    的元组中定义
+
+
+3.include(pattern_list)
+pattern_list是一个列表，列表中装的是path或者re_path，示例代码如下
+```python
+path('movie/', include([
+        path('', views.movie),
+        path('list/', views.movie_list)
+    ]))
+```
