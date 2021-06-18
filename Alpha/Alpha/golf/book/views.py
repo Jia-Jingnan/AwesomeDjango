@@ -10,3 +10,7 @@ def book(request):
 def book_detail(request, book_id):
     text = '图书的ID是：%s' % book_id
     return HttpResponse(text)
+
+
+def book_list(request):
+    return HttpResponse("图书列表页面")
