@@ -5,4 +5,9 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+
+    # 上下文
+    context = {
+        'age': 20
+    }
+    return render(request, 'index.html', context=context)
