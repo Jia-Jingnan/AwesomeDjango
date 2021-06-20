@@ -7,3 +7,6 @@ from django.http import HttpResponse
 def index(request):
     html = render_to_string('index.html')
     return HttpResponse(html)
+
+def alpha(request):
+    return render(request, 'alpha.html')
