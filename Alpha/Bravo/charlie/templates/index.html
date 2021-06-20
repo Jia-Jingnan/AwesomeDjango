@@ -7,12 +7,15 @@
 <body>
 
 {#    判断是否大于context中的age#}
-    {% if age < 18 %}
-        <p>未成年</p>
-    {% elif age == 18%}
-        <P>刚满18</P>
-    {% else %}
-        <p>已成年</p>
-    {% endif %}
+{#    {% if age < 18 %}#}
+{#        <p>未成年</p>#}
+{#    {% elif age == 18%}#}
+{#        <P>刚满18</P>#}
+{#    {% else %}#}
+{#        <p>已成年</p>#}
+{#    {% endif %}#}
+{% if 'SpiderMan' in heros %}
+    <p>SpiderMan is coming</p>
+{% endif %}
 </body>
 </html>
