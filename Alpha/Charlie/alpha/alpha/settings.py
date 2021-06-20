@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'alpha.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',
+        'USER': 'root',
+        'PASSWORD': '1qaz2wsx',
+        'HOST': '127.0.0.1',
+        'PORT': 3306
     }
 }
 
@@ -119,3 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+try:
+    from . import local_settings
+except ImportError:
+    pass
