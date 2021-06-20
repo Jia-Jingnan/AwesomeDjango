@@ -25,7 +25,18 @@ def index(request):
     # }
 
     # p是一个字典类型
+    # context = {
+    #     'p': {'person': 'charlie'}
+    # }
+
+    # p 是一个列表
     context = {
-        'p': {'person': 'charlie'}
+        'p': [
+            "Tony Stark",
+            "Peter Park",
+            "Thor",
+            "Stranger",
+            "Loki"
+        ]
     }
     return render(request, 'index.html', context=context)
