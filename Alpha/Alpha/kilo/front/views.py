@@ -1,9 +1,16 @@
 from django.http import HttpResponse
+from django.shortcuts import reverse, redirect
 
 
 # Create your views here.
 def index(request):
-    return HttpResponse("首页")
+    # 首页传入username时需要登陆
+    username = request.GET.get('username')
+    if username:
+        return HttpResponse("首页")
+    else:
+        return redirect(reverse('login'))
+
 
 
 def login(request):
