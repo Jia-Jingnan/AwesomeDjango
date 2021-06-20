@@ -1,0 +1,23 @@
+re_path笔记：  
+1.re_path和path的作用是一样的，只不过re_path是在
+写url的时候可以使用正则表达式，功能更强大  
+2.写正则表达式都推荐使用原生字符串，都是以r^为开头的
+字符串  
+3.在正则表达式中定义变量，需要使用圆括号括起来，这个参数是有名字的
+就需要使用?P<参数的名字>,然后在后面定义正则表达式的规则
+，示例代码如下  
+```python
+# python中正则表达式，r代表原生字符串，未经过任何处理。
+    # ^表示以..为开头
+    # $表示以..为结尾
+    # r'^$' 表示一个空字符串
+    re_path(r'^$', views.article),
+    # artical/list/<year>
+    # r^list/ 表示以list/开头， /$表示以/结尾
+    # 表达式中()括号表示要捕获的值
+    # ?P 是 named group，定一个一个变量
+    # ?P<year>表示定义一个变量名year，\d表示0-9的数字，{4}表示有4个数字
+    re_path(r'^list/(?P<year>\d{4})/$', views.artical_list),
+    re_path(r'^list/(?P<year>\d{4})/(?P<month>\d{2})/$', views.artical_li
+```
+4.如果不是特别要求，直接使用path就够了，正则表达式比较晦涩
