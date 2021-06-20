@@ -1,0 +1,12 @@
+reverse笔记：  
+1.如果在反转url是需要添加参数可以传递kwargs到reverse
+函数中，示例代码如下：
+```python
+ # reverse不需要传参的url地址 login/
+        # return redirect(reverse('login'))
+        # reverse需要传参数的url地址  detial/1
+        # return redirect(reverse('artical', kwargs={'article_id': 1}))
+        # reverse需要传查询字符串的URL地址，detail?artical_id=11
+        return redirect(reverse('login') + '?next=/')
+
+```
