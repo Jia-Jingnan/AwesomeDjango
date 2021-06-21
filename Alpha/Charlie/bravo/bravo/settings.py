@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'front'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 导入local_settings文件配置数据库
+try:
+    from .local_settings import *
+except ImportError:
+    pass
