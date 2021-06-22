@@ -58,5 +58,12 @@
             {% endfor %}
         </tbody>
     </table>
+    <ul>
+        {% for comment in comments %}
+            <li>{{comment}}</li>
+        {% empty %}
+            <li>没有任何评论</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

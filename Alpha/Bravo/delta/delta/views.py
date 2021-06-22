@@ -28,6 +28,9 @@ def index(request):
             'username': 'zhiliao',
             'age': '18',
             'height': 180
+        },
+        'comments':{
+
         }
     }
     return render(request, 'index.html',context=context)
