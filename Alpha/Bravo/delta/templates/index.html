@@ -35,6 +35,7 @@
     <table>
         <thead>
             <tr>
+                <td>序号</td>
                 <td>书名</td>
                 <td>作者</td>
                 <td>价格</td>
@@ -43,6 +44,7 @@
         <tbody>
             {% for book in books %}
             <tr>
+                <td>{{forloop.counter}}</td>
                 <td>{{book.name}}</td>
                 <td>{{book.author}}</td>
                 <td>{{book.price}}</td>
