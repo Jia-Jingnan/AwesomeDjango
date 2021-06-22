@@ -14,3 +14,12 @@ class Movie(models.Model):
     author = models.CharField(max_length=100, null=False)
     # price, float类型
     price = models.FloatField(null=False, default=0)
+
+
+class Publish(models.Model):
+
+    # name, varchar类型，长度100
+    name = models.CharField(max_length=100, null=False)
+    # author， varhcar类型
+    address = models.CharField(max_length=100, null=False)
+
