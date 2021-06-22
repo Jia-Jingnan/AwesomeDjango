@@ -43,12 +43,18 @@
         </thead>
         <tbody>
             {% for book in books %}
-            <tr>
-                <td>{{forloop.revcounter}}</td>
-                <td>{{book.name}}</td>
-                <td>{{book.author}}</td>
-                <td>{{book.price}}</td>
-            </tr>
+                {% if forloop.first %}
+                    <tr style="background: red;">
+                {% elif forloop.last %}
+                    <tr style="background: antiquewhite;">
+                {% else %}
+                    <tr>
+                {% endif %}
+                    <td>{{forloop.revcounter}}</td>
+                    <td>{{book.name}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.price}}</td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
