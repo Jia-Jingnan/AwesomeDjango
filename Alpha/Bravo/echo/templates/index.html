@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>with标签</title>
+</head>
+<body>
+{#    起别名#}
+    {% with zhangsan=persons.0 %}
+    <p>{{ zhangsan }}</p>
+    <p>{{ zhangsan }}</p>
+    <p>{{ zhangsan }}</p>
+    {% endwith %}
+</body>
+</html>
