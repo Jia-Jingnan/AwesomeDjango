@@ -11,5 +11,8 @@
     <p>{{ zhangsan }}</p>
     <p>{{ zhangsan }}</p>
     {% endwith %}
+    {% with persons.0 as zh %}
+        <p>{{ zh }}</p>
+    {% endwith %}
 </body>
 </html>
