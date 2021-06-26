@@ -13,7 +13,7 @@
         <tbody>
             <tr>
                 <td>{{ forloop.counter }}</td>
-                <td>{{ book.1 }}</td>
+                <td><a href="{% url 'book_detail' book_id=book.0 %}">{{ book.1 }}</a></td>
                 <td>{{ book.2 }}</td>
             </tr>
         </tbody>
