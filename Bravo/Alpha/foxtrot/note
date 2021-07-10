@@ -1,0 +1,36 @@
+## 上周内容回顾
+
+- 单表的增删改查
+
+```python
+# 增
+1.create()
+2.对象.save()
+
+# 查
+1.all()
+2.filter()  # 筛选条件，括号内多个参数逗号隔开，并且默认是and关系
+3.get()  # 筛选条件
+
+# 改
+1.update()  queryset对象，批量更新
+2.对象.save()
+
+# 删
+1.delete()  queryset对象，批量删除
+2.对象.delete()
+```
+
+- 测试环境的准备
+
+```python
+# 如果只是想测试django某个py文件，大部分情况下都是models.py
+# 在应用下的test.py或者自己新建一个任意名称的py文件
+1.去manage.py拷贝前四行
+2.自己书写两行
+ import django
+ django.setup()
+```
+
+
+
