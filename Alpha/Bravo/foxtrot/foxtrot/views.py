@@ -19,3 +19,8 @@ def movie(request):
 
 def city(request):
     return HttpResponse('同城页面')
+
+
+def book_detail(request, book_id):
+    text = '图书ID：%s'% book_id
+    return HttpResponse(text)
