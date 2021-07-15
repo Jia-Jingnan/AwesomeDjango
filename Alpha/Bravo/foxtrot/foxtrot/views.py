@@ -26,6 +26,6 @@ def city(request):
     return HttpResponse('同城页面')
 
 
-def book_detail(request, book_id):
-    text = '图书ID：%s'% book_id
+def book_detail(request, book_id, category):
+    text = '图书ID：%s, 分类是%s'% (book_id, category)
     return HttpResponse(text)
