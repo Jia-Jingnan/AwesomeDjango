@@ -5,6 +5,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
+def login(request):
+    next = request.GET.get('next')
+    text = '登陆完成后要跳转的页面URL是%s' % next
+    return HttpResponse(text)
+
 def index(request):
     return render(request, 'index.html')
 
