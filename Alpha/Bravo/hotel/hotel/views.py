@@ -1,0 +1,8 @@
+# Author:   jingnan
+# Date:    2021/7/29
+# Desc:
+from django.shortcuts import render
+
+
+def index(request):
+    return render(request, 'index.html')
